@@ -162,3 +162,22 @@ La fonction MAX() OVER() permet de calculer la valeur maximale d'une colonne pou
 - présenter pour un département, la ville, le nom du département, 
 la population en 2012 et la population de la ville la plus peuplée. 
 - Ordonnez le résultat et présentez les 20 premières lignes.
+
+## GRP-F. AVG() OVER()
+La fonction AVG() OVER() permet de calculer la valeur moyenne d'une colonne pour un ensemble de lignes. 
+
+#### DEFINITION [Source](https://datajourney.io/les-fonctions-de-fenetrage-en-sql.html)
+- OVER() est une « window function » (fonction de fenêtrage) plus lisible et plus simple de compréhension
+- Les paquets de lignes sur lesquels sont effectués les calculs d’agrégation sont appelés PARTITIONS
+
+#### Principale différence avec AVG() GROUP BY()
+- Pour GROUP BY() et une fois le calcul terminé, les lignes sont agrégées et le nombre de celles-ci est réduit
+- POUR OVER(), les lignes ne sont pas agrégées et le résultat est ajouté à toutes les lignes, ce qui renvoie un nombre de lignes identique à celui de la table initiale. En d’autres termes, l’information a été dupliquée pour chaque ligne.
+
+##### Nb : On peut obtenir le même résultat (c’est-à-dire un nombre de lignes identique à la table initiale) mais cela va engendrer un code plus conséquent (avec des join par exemple). C’est pourquoi les « window functions » sont plus lisibles car elles permettent un code plus concis.
+
+### Ennoncé
+- A partir de la BDD commandes, trouver quelle est la quantité moyenne pour chacun des produits commandé.
+
+- A partir de la BDD villes/départements, afficher la population moyenne pour chaque ville.
+
