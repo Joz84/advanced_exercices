@@ -128,3 +128,30 @@ VALUES(value1, value2, value3..);
 DELETE FROM view_name
 WHERE condition;
 ```
+
+## GRP-D. BUCKET
+La création de "buckets" Les buckets sont des intervalles de valeurs créés à partir d'une colonne donnée. Ils sont utiles pour agréger les données en groupes.
+
+### Analyse des salaires des joueurs de la NBA en utilisant des buckets
+
+
+### Ennoncé
+
+Dans cet exercice, vous devrez utiliser des "buckets" pour classer les salaires des joueurs de la NBA pour la saison 2017-2018.
+
+Vous devrez créer des intervalles de salaires (buckets) :
+
+Classer le salaire des joueurs en 4 catégories afin de regrouper les joueurs en fonction de la tranche des salaires pendant cette période. 
+Indice : vous pouvez vous servir des quantiles pour créer les 4 groupes.
+
+Cet exercice mettra en pratique les compétences de SQL liées à l'agrégation, au filtrage et à la manipulation des données.
+
+#### Source des données
+Pour cet exercice vous devrez utiliser ce [dataset](https://www.kaggle.com/datasets/koki25ando/salary?select=NBA_season1718_salary.csv) 
+
+### A vos marques, prêt, dunkez !!!
+
+![michael](https://www.basketusa.com/wp-content/uploads/2020/02/jordan-sdk-1988.jpg)
+
+
+
