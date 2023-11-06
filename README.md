@@ -67,10 +67,64 @@ VALUES
 Une fonction de fenêtre calcule une valeur en fonction d'un ensemble de lignes dans une table. Elle peut être utilisée pour effectuer des calculs sur des données agrégées ou pour calculer des totaux cumulatifs.
 
 ### Ennoncé
-avec la db olist  Tache:  Écrivez une requête SQL qui renvoie : 
+Avec la db olist  Tache:  Écrivez une requête SQL qui renvoie : 
 - les ventes totales et le revenu total pour chaque produit et chaque state. 
 - les ventes totales et le revenu total par produits.  
 - les ventes et state par région.  
 on peut résoudre cet exercice en utilisant des fonctions window telles que SUM() avec l'option OVER pour calculer les totaux.
 
+## GRP-A. VIEW
+Une vue est une requête stockée dans la base de données sous forme de table virtuelle. 
 
+Elle permet de simplifier les requêtes en combinant plusieurs tables et en pré-filtrant les données.
+
+### Ennoncé
+
+1) FROM ONE TABLE
+Créer une View table à partir de la table client de la base de données 'commandes' qui contiendra:
+		- nom, prenom, et les villes commençant par 'L'.
+		- Afficher la table
+
+2) FROM MULTIPLE TABLES
+Créer une View table à partir des tables client et commande qui contiendra:
+		- nom, prenom et la somme des achats par clients. 
+		- Afficher la table
+
+3) Afficher une table des View tables créées avec :
+Ex: show full tables where table_type like "%VIEW";
+
+4) Supprimer une View avec 'DROP WIEW view_name':
+Ex: DROP VIEW 'nom de la view table';
+
+5) Enfin, avec la clause WITH CHECK OPTION suivant une condition WHERE,
+il est possible d'empêcher l'ajout de rows ne respectant pas la condition WHERE.
+
+Une UPDATE ou INSERT ne respectant pas la condition WHERE retournera une erreur.
+
+En utilisant la View table de la question 1). Ajouter la clause 'WITH CHECK OPTION' la ligne suivant la clause WHERE.
+Ajouter un client habitant à 'Lyon' puis un client habitant à 'Bordeaux'.
+Vous devriez avoir un message d'erreur en ajoutant le second client.
+
+
+#### Commentaires/Tips
+
+On peut créer ou remplacer pour ajouter ou supprimer les fields d'une View.
+
+Ex:
+```
+CREATE OR REPLACE VIEW view_name AS
+SELECT column1,column2,..
+FROM table_name
+WHERE condition;
+```
+
+Il est aussi possible d'ajouter et supprimer des rows dans une View table.
+Ex:
+```
+INSERT INTO view_name(column1, column2 , column3,..) 
+VALUES(value1, value2, value3..);
+```
+```
+DELETE FROM view_name
+WHERE condition;
+```
