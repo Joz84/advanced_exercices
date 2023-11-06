@@ -79,6 +79,7 @@ Une vue est une requête stockée dans la base de données sous forme de table v
 Elle permet de simplifier les requêtes en combinant plusieurs tables et en pré-filtrant les données.
 
 ### Ennoncé
+Les questions suivantes se basent sur la BDD des commandes de l'Exercice 3 fait semaine dernière (tables client, commande, commande_ligne).
 
 1) FROM ONE TABLE
 Créer une View table à partir de la table client de la base de données 'commandes' qui contiendra:
