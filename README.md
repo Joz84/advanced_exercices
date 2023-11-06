@@ -62,3 +62,15 @@ VALUES
     ('2023-11-01', 66000.00),
     ('2023-12-01', 68000.00);
 ```
+
+## GRP-B Window Function
+Une fonction de fenêtre calcule une valeur en fonction d'un ensemble de lignes dans une table. Elle peut être utilisée pour effectuer des calculs sur des données agrégées ou pour calculer des totaux cumulatifs.
+
+### Ennoncé
+avec la db olist  Tache:  Écrivez une requête SQL qui renvoie : 
+- les ventes totales et le revenu total pour chaque produit et chaque state. 
+- les ventes totales et le revenu total par produits.  
+- les ventes et state par région.  
+on peut résoudre cet exercice en utilisant des fonctions window telles que SUM() avec l'option OVER pour calculer les totaux.
+
+
