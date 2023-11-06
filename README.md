@@ -154,4 +154,11 @@ Pour cet exercice vous devrez utiliser ce [dataset](https://www.kaggle.com/datas
 ![michael](https://www.basketusa.com/wp-content/uploads/2020/02/jordan-sdk-1988.jpg)
 
 
+## GRP-E. MAX() OVER()
+La fonction MAX() OVER() permet de calculer la valeur maximale d'une colonne pour un ensemble de lignes.
 
+### Ennoncé
+À partir de la database villes_france_free, en utilisant la fonction MAX et la clause OVER :  
+- présenter pour un département, la ville, le nom du département, 
+la population en 2012 et la population de la ville la plus peuplée. 
+- Ordonnez le résultat et présentez les 20 premières lignes.
